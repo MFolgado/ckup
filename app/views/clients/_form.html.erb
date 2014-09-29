@@ -1,0 +1,49 @@
+<%= form_for(@client) do |f| %>
+  <% if @client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@client.errors.count, "error") %> prohibited this client from being saved:</h2>
+      <ul>
+      <% @client.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="tformulario"> 
+    <%= f.label :Nome%> <br>
+    <%= f.text_field :nome , :size=>100 %>
+  </div>
+  <div class="tformulario"> 
+    <%= f.label :Endereço%> <br>
+    <%= f.text_field :endereco , :size=>100 %>
+  </div>
+  <div class="tformulario"> 
+    <%= f.label :Bairro%> <br>
+    <%= f.text_field :bairro , :size=>100 %>
+  </div>
+  <div class="tformulario"> 
+    <%= f.label :Cidade%> <br>
+    <%= f.text_field :cidade , :size=>100%>
+  </div>
+  <div class="tformulario"> 
+    <%= f.label :UF%> <br>
+    <%= f.text_field :uf , :size=>5%>
+  </div>
+  <div class="tformulario"> 
+    <%= f.label :Cep%> <br>
+    <%= f.text_field :cep , :size=>30%>
+  </div>
+  <div class="tformulario"> 
+    <%= f.label :Email%> <br>
+    <%= f.text_field :email , :size=>50%>
+  </div>
+  <div class="tformulario"> 
+    <%= f.label :Tel%> <br>
+    <%= f.text_field :tel , :size=>40%>
+  </div>
+  <div>
+    <br>
+    <%=f.submit "Salvar"%>
+  </div>
+<%end%>

@@ -1,0 +1,25 @@
+<h3 class="texto"> Listagem de Serviços Cadastrados</h3>
+
+<table class="show">
+  <thead>
+    <tr >
+      <th>Descrição</th>
+      <th>Valor</th>      
+      <th colspan="3">Opções</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @services.each do |serv| %>
+      <tr>
+        <td><%= serv.descricao %></td>
+        <td><%= serv.valor %></td>        
+        <td><%= link_to 'Show', serv%></td>
+        <td><%= link_to 'Edit', edit_service_path(serv) %></td>
+        <td><%= link_to 'Destroy', serv, method: :delete, data: { confirm: 'Tem certeza que deseja excluir ?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+ 
+</table>
+

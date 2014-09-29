@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CheckUP - Micros</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="topo"> 
+  <img src="/images/logo.jpg" alt="teste" class="logo"></img>
+<font class="texto">  </font>
+</div>
+
+<div class="corpo">
+<div id='cssmenu'>
+<ul>
+   <li class='active'><%= link_to  'Home' , root_path%> </li>
+   <li class='has-sub'><a href='#'><span>Cadastro</span></a>
+      <ul>
+         <li><%= link_to  'Clientes' , new_client_path%></a></li>
+         <li><%= link_to  'Serviços' , new_service_path%></a></li>
+         <li><%= link_to  'Peças' , new_part_path%></li>
+         <li><%= link_to  'Ordem de serviços' , new_order_service_path%></a></li>.
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Consultas</span></a>
+      <ul>
+         <li><%= link_to 'Clientes' , clients_path%></li>
+         <li><%= link_to 'Serviços' , services_path%></li>
+         <li><%= link_to 'Peças' , parts_path%> </li>
+         <li><%= link_to 'Ordem de serviços' , order_services_path%></a></li>
+      </ul>
+   </li>
+   <li class='has-sub last'><a href='#'><span>Relatórios</span></a>
+      <ul>
+         <li><a href='#'><span>Cliente</span></a></li>
+         <li><a href='#'><span>Serviços</span></a></li>
+         <li><a href='#'><span>Peças</span></a></li>
+		 <li><a href='Orcamento.html'><span>Orçamento</span></a></li>
+         <li class='last'><a href='#'><span>Fechamento</span></a></li>
+      </ul>
+   </li>
+   <li class='has-sub last'><a href='#'><span>Agenda</span></a>
+     
+   </li>
+</ul>
+</div>
+<div class="formulario" >
+ 
+  <%= yield %>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<h3 class="texto"> Visualização de Cliente </h3>
+
+<p class="texto" align="center"><%= notice %></p>
+
+<p class="tformulario">
+  <strong>Nome:</strong>
+  <%= @client.nome %>
+</p>
+
+<p class="tformulario">
+  <strong>Endereco:</strong>
+  <%= @client.endereco %>
+</p>
+
+<p class="tformulario">
+  <strong>Bairro:</strong>
+  <%= @client.bairro %>
+</p>
+
+<p class="tformulario">
+  <strong>Cidade:</strong>
+  <%= @client.cidade %>
+</p>
+
+<p class="tformulario">
+  <strong>Uf:</strong>
+  <%= @client.uf %>
+</p>
+
+<p class="tformulario">
+  <strong>Cep:</strong>
+  <%= @client.cep %>
+</p>
+
+<p class="tformulario">
+  <strong>Tel:</strong>
+  <%= @client.tel %>
+</p>
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', root_path, confirm: 'Tem certeza que deseja voltar?'%>

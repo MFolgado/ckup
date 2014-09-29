@@ -1,0 +1,17 @@
+<h3 class="texto"> Visualização de Ordem de Serviço </h3>
+
+<p class="texto" align="center"><%= notice %></p>
+
+<p class="tformulario">
+  <strong>Cliente:</strong>
+  <%= @order_service.client_id %>
+</p>
+
+
+<p class="tformulario">
+  <strong>Data:</strong>
+  <%= @order_service.date %>
+</p>
+
+<%= link_to 'Edit', edit_order_service_path(@order_service) %> |
+<%= link_to 'Back', root_path, confirm: 'Tem certeza que deseja voltar?'%>

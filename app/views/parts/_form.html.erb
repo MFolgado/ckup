@@ -1,0 +1,43 @@
+<%= form_for(@part) do |f| %>
+  <% if @part.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@part.errors.count, "error") %> prohibited this part from being saved:</h2>
+      <ul>
+      <% @part.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="tformulario"> 
+    <%= f.label :Descrição%> <br>
+    <%= f.text_field :descricao , :size=>100 %>
+  </div>
+  <div class="tformulario"> 
+    <%= f.label :Modelo%> <br>
+    <%= f.text_field :modelo , :size=>100 %>
+  </div>
+  <div class="tformulario"> 
+    <%= f.label :Preço_de_Compra%> <br>
+    <%= f.text_field :p_compra , :size=>100 %>
+  </div>
+  <div class="tformulario"> 
+    <%= f.label :Preço_de_Venda%> <br>
+    <%= f.text_field :p_venda , :size=>100%>
+  </div>
+  <div class="tformulario"> 
+    <%= f.label :Quantidade%> <br>
+    <%= f.text_field :quantidade , :size=>5, :type=>"number"%>
+  </div>
+  <div class="tformulario"> 
+    <%= f.label :Lucro%> <br>
+    <%= f.text_field :lucro , :size=>30%>
+  </div>
+  
+  <div>
+    <br>
+    <%=f.submit "Salvar"%>
+  </div>
+<%end%>
+

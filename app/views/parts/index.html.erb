@@ -1,0 +1,34 @@
+<h3 class="texto"> Listagem de Peças Cadastradas</h3>
+
+<table class="show">
+  <thead>
+    <tr >
+      <th>Descrição</th>
+      <th>Modelo</th>      
+      <th>Preço de Compra</th>
+      <th>Preço de Venda</th>
+      <th>Quantidade</th>
+      <th>Lucro</th>
+      <th colspan="3">Opções</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parts.each do |p| %>
+      <tr>
+        <td><%= p.descricao %></td>
+        <td><%= p.modelo %></td>
+        <td><%= p.p_compra %></td>
+        <td><%= p.p_venda %></td>
+        <td><%= p.quantidade %></td>
+        <td><%= p.lucro %></td>
+        
+        <td><%= link_to 'Show', p%></td>
+        <td><%= link_to 'Edit', edit_part_path(p) %></td>
+        <td><%= link_to 'Destroy', p, method: :delete, data: { confirm: 'Tem certeza que deseja excluir ?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+ 
+</table>
+

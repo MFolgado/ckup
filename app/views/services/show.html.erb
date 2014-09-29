@@ -1,0 +1,16 @@
+<h3 class="texto"> Visualização de Serviço </h3>
+
+<p class="texto" align="center"><%= notice %></p>
+
+<p class="tformulario">
+  <strong>Descrição:</strong>
+  <%= @service.descricao %>
+</p>
+
+<p class="tformulario">
+  <strong>Valor:</strong>
+  <%= @service.valor %>
+</p>
+
+<%= link_to 'Edit', edit_service_path(@service) %> |
+<%= link_to 'Back', root_path, confirm: 'Tem certeza que deseja voltar?'%>
