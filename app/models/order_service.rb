@@ -5,6 +5,6 @@ class OrderService < ActiveRecord::Base
 	has_many :parts, through: :services
 
 	accepts_nested_attributes_for :services
-	accepts_nested_attributes_for :parts
+	# accepts_nested_attributes_for :parts
 	
 end
