@@ -51,6 +51,6 @@ class ServicesController < ApplicationController
 	end
 
 	def service_params
-		params.require(:service).permit(:descricao, :valor, {:parts => []})
+		params.require(:service).permit(:descricao, :valor, {:parts_ids => []})
 	end
 end

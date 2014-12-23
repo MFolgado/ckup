@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+    types = Type.create([{name: 'Data'}, {name: 'Texto'}, {name: 'Número'}])
