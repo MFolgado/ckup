@@ -18,15 +18,14 @@
   </div>
   <br>
   <div class="tformulario"> 
+    <%= f.label :serviço %> <br>
     <%= f.collection_check_boxes(:service_ids, Service.all, :id, :descricao)%>          
   </div>  
   <br>
 
-   <div class="tformulario"> 
-    <%= f.fields_for :part do |pt|%>
-        <%= pt.label :peça %> <br>
-        <%= pt.collection_check_boxes(:part_ids, Part.all, :id, :descricao)%>
-    <% end %>
+   <div class="tformulario">     
+      <%= f.label :peça %> <br>
+      <%= f.collection_check_boxes(:part_ids, Part.all, :id, :descricao)%>    
   </div> 
   <br>
   <div class="tformulario">

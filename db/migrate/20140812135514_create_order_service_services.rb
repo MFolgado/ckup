@@ -4,6 +4,7 @@ class CreateOrderServiceServices < ActiveRecord::Migration
 
       t.belongs_to :service
       t.belongs_to :order_service
+      t.belongs_to :part
       
       t.timestamps
     end
